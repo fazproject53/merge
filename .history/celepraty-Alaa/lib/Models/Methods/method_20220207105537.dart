@@ -344,14 +344,14 @@ Widget textFeildWithButton(context, child1, child2){
  drowAppBar(String titel){
   return AppBar(
     title: Text(titel,style:TextStyle(
-      fontSize:22.sp, 
+      fontSize:16.sp, 
       fontFamily: 'Cairo',
       color: black
     ),
     
     ),
     centerTitle: true,
-    leading: back,
+    actions: [],
     backgroundColor: deepwhite,
     elevation: 0,
   );

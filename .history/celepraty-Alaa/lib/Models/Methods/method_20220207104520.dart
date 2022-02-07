@@ -341,10 +341,10 @@ Widget textFeildWithButton(context, child1, child2){
 }
 //Drow app bar----------------------------------------------------
 
- drowAppBar(String titel){
+Widget drowAppBar(String titel){
   return AppBar(
     title: Text(titel,style:TextStyle(
-      fontSize:22.sp, 
+      fontSize:16.sp, 
       fontFamily: 'Cairo',
       color: black
     ),
@@ -352,7 +352,6 @@ Widget textFeildWithButton(context, child1, child2){
     ),
     centerTitle: true,
     leading: back,
-    backgroundColor: deepwhite,
-    elevation: 0,
+    bac
   );
 }

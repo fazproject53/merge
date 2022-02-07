@@ -41,7 +41,7 @@ IconData block = Icons.block;
 IconData chat = Icons.chat_bubble_outline;
 IconData logout = Icons.logout;
 IconData copyRight = Icons.copyright;
-Icon back=Icon(Icons.arrow_back_ios_sharp,color: black,size:30.w);
+Icon back=Icon(Icons.arrow_back_ios_sharp,color: black,size:16.w);
 //Icons name----------------------------------------------------------------
 
 

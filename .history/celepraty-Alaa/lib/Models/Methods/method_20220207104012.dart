@@ -339,20 +339,6 @@ Widget textFeildWithButton(context, child1, child2){
   ),);
 
 }
-//Drow app bar----------------------------------------------------
+//Dr----------------------------------------------------
 
- drowAppBar(String titel){
-  return AppBar(
-    title: Text(titel,style:TextStyle(
-      fontSize:22.sp, 
-      fontFamily: 'Cairo',
-      color: black
-    ),
-    
-    ),
-    centerTitle: true,
-    leading: back,
-    backgroundColor: deepwhite,
-    elevation: 0,
-  );
-}
+drowAppBar()

@@ -14,8 +14,8 @@ class _RequestMainPageState extends State<RequestMainPage> {
   @override
   Widget build(BuildContext context) {
     return 
-    Directionality(
-      textDirection: TextDirection.rtl,
+    // Directionality(
+    //   textDirection: TextDirection.rtl,
       child:
        Scaffold(
         appBar: drowAppBar(requestBar),
@@ -38,7 +38,7 @@ class _RequestMainPageState extends State<RequestMainPage> {
             SizedBox(height: 10.h,),
           ],
         )),
-     ),
+      ),
     );
   }
 }
