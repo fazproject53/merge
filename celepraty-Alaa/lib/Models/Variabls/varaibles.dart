@@ -13,6 +13,7 @@ const Color darkBlue = Color(0xFF39579A);
 const Color textBlack = Color(0xFF5C5E6F);
 const Color darkWhite = Color(0xFF7B7B8B);
 const Color deepBlack = Color(0xFF7477A0);
+const Color border = Color(0xFFCED0D2);
 
 const Color transparent=Colors.transparent;
 Color textFieldBlack2 = Color(0xFF0B0B15);
@@ -39,6 +40,10 @@ IconData block = Icons.block;
 IconData chat = Icons.chat_bubble_outline;
 IconData logout = Icons.logout;
 IconData copyRight = Icons.copyright;
+IconData ad = Icons.add_box;
+IconData adArea = Icons.input;
+IconData arrow = Icons.arrow_back_ios;
+IconData attach = Icons.attach_file;
 //Icons name----------------------------------------------------------------
 
 

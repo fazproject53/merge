@@ -1,0 +1,49 @@
+import 'package:celepraty/Models/Methods/method.dart';
+import 'package:celepraty/Models/Variabls/varaibles.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class advArea extends StatefulWidget{
+  _advAreaState createState() => _advAreaState();
+}
+
+class _advAreaState extends State<advArea>{
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController controlName = new TextEditingController();
+  final TextEditingController controlEmail = new TextEditingController();
+  final TextEditingController controlDesc = new TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SingleChildScrollView(
+        child: Container(
+        child: Form(
+        key: _formKey,
+        child: paddingg(12, 12, 5, Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+        SizedBox(height: 80.h,),
+          padding(10, 12, Container( alignment : Alignment.topRight,child:  Text(' اطلب مسلحتك\n الاعلانية', style: TextStyle(fontSize: 18.sp, color: textBlack , fontFamily: 'Cairo'), )),),
+
+          SizedBox(height: 20.h,),
+          paddingg(15, 15, 12,textFieldNoIcon(context, 'الاسم', 12, false, controlName,(String? value) {if (value == null || value.isEmpty) {
+            return 'Please enter some text';} return null;},),),
+          paddingg(15, 15, 12,textFieldNoIcon(context, 'البريد الالكتروني', 12, false, controlEmail,(String? value) {if (value == null || value.isEmpty) {
+            return 'Please enter some text';} return null;},),),
+          paddingg(15, 15, 12,textFieldDesc(context, 'الوصف الخاص بالمساحة', 12, false, controlDesc,(String? value) {if (value == null || value.isEmpty) {
+            return 'Please enter some text';} return null;},),),
+
+
+          const SizedBox(height: 20,),
+          paddingg(15, 15, 12, uploadImg(200, 54,text(context, 'قم برفع الصورة التي تريد وضعها بالاعلان', 12, black),(){}),),
+
+
+          const SizedBox(height: 30,),
+          padding(15, 15, gradientContainerNoborder(getSize(context).width,  buttoms(context, 'رفع الطلب', 15, white, (){})),),
+          const SizedBox(height: 30,),
+        ]),
+        ),
+
+        )))));}}

@@ -1,5 +1,7 @@
 //================ convert hex colors to rgb colors================
+import 'package:celepraty/Models/Methods/classes/GradientIcon.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -93,7 +95,7 @@ Widget gradientContainerNoborder(double width,Widget child) {
     width: width.w,
     child:child,
     decoration: BoxDecoration(
-      boxShadow: [],
+      boxShadow: const [BoxShadow(color: darkWhite, blurRadius: 5, offset: Offset(4,6))],
       borderRadius: BorderRadius.circular(10.0),
       gradient: const LinearGradient(
         begin: Alignment(0.7, 2.0),
@@ -277,15 +279,50 @@ Widget textFieldNoIcon(
         isDense: false,
         filled: true,
         hintStyle: TextStyle(color: black, fontSize: fontSize.sp, fontFamily: 'Cairo'),
-        fillColor: textFieldBlack2,
+        fillColor: textFieldBlack2.withOpacity(0.70),
         labelStyle: TextStyle(color: white, fontSize: fontSize.sp),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.r)),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
         labelText: key,
 
         contentPadding: EdgeInsets.all(10.h)),
   );
 
 }
+//======================== for description multiline ====================
+Widget textFieldDesc(
+    context,
+    String key,
+    double fontSize,
+    bool hintPass,
+    TextEditingController mycontroller,
+    myvali,
+    ) {
+  var expand = false;
+  return SizedBox(
+    height: 200.h,
+    child: TextField(
+      controller: mycontroller,
+      keyboardType: TextInputType.multiline,
+      maxLines: null,
+      minLines: 10,
+      textAlignVertical: TextAlignVertical.top,
+      style: TextStyle(color: white, fontSize: fontSize.sp, fontFamily: 'Cairo'),
+      decoration: InputDecoration(
+          isDense: false,
+          filled: true,
+          hintStyle: TextStyle(color: black, fontSize: fontSize.sp, fontFamily: 'Cairo'),
+          fillColor: textFieldBlack2.withOpacity(0.70),
+          labelStyle: TextStyle(color: white, fontSize: fontSize.sp,), alignLabelWithHint: true,
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
+          labelText: key,
+
+
+          contentPadding: EdgeInsets.all(10.h)),
+    ),
+  );
+
+}
+
 Widget textFieldNoIcon2(
     context,
     String key,
@@ -303,7 +340,7 @@ Widget textFieldNoIcon2(
         isDense: false,
         filled: true,
         hintStyle: TextStyle(color: black, fontSize: fontSize.sp, fontFamily: 'Cairo'),
-        fillColor: textFieldBlack2,
+        fillColor: textFieldBlack2.withOpacity(0.70),
         labelStyle: TextStyle(color: white, fontSize: fontSize.sp),
         border: OutlineInputBorder(borderRadius: BorderRadius.only( bottomRight: Radius.circular(10.0), topRight: Radius.circular(10.0),)),
         labelText: key,
@@ -311,8 +348,9 @@ Widget textFieldNoIcon2(
         contentPadding: EdgeInsets.all(10.h)),
   );
 
+
 }
-Widget textFeildWithButton(context, child1, child2){
+Widget textFeildWithButton(context, child1, child2) {
   return paddingg(15, 15, 0, SizedBox(
     width: getSize(context).width,
     child: Row(
@@ -320,9 +358,9 @@ Widget textFeildWithButton(context, child1, child2){
       children: [
 
         Expanded(
-          flex:4,
-          child: paddingg(0, 0, 12,Container(
-              width: getSize(context).width/1.2,
+          flex: 4,
+          child: paddingg(0, 0, 12, Container(
+              width: getSize(context).width / 1.2,
               child: child1
           ),),
         ),
@@ -336,6 +374,38 @@ Widget textFeildWithButton(context, child1, child2){
 
       ],),
   ),);
-
 }
+  //============================ show bottomsheet takes a column ==============================
+
+
+  void showBottomSheett(context,  buttomMenue){
+    showModalBottomSheet(
+      isScrollControlled: true,
+        backgroundColor: black,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(topLeft:  Radius.circular(50), topRight: Radius.circular(50)),
+        ),
+        context: context, builder:(context){
+      return Container(
+        height: 400.h,
+        child: buttomMenue,
+      );
+    });
+  }
+
+  Widget uploadImg(double width, double hight, child , onTap){
+  return InkWell(
+    child: Container(
+      width: width.w,
+      height: hight.h,
+      child:Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:[GradientIcon(attach, 30.w, const LinearGradient(colors: <Color>[pink, blue, purple])), child]),
+      decoration:  BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8)), border: Border.all(color: black)),
+    ),
+    onTap: onTap,
+  );
+
+  }
 
