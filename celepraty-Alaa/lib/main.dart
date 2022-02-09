@@ -1,5 +1,6 @@
 import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:celepraty/celebrity/celebrityHomePage.dart';
+import 'package:celepraty/celebrity/orders/gifttingForm.dart';
 import 'package:celepraty/celebrity/setting/profileInformation.dart';
 import 'package:celepraty/introduction_screen/src/introduction_screen_main.dart';
 import './celebrity/orders/advArea.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: "Cairo",
               colorScheme: ColorScheme.fromSwatch().copyWith(primary: pinkLigth),),
-            home: advArea()
+            home: celebrityHomePage()
             //----------------------------------
           ),
       ),

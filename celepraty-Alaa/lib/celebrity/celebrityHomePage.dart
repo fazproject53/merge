@@ -1,6 +1,7 @@
 import 'package:celepraty/Models/Methods/method.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:celepraty/Models/Methods/classes/GradientIcon.dart';
+import 'package:celepraty/celebrity/orders/advArea.dart';
 import 'package:celepraty/celebrity/orders/gifttingForm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -106,7 +107,7 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
                       child: Container(
                           decoration: const BoxDecoration(gradient:  LinearGradient(colors: <Color>[pink, blue, purple],begin: Alignment.topLeft,
                               end: Alignment.bottomRight), borderRadius:  BorderRadius.all(const Radius.circular(50))), height: 40.h,width: 40.h ,child: Center(child: Icon( arrow,size: 25.w,color: white))),
-                      onTap: (){}, ),
+                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => advArea() ),);}, ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [

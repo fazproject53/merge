@@ -3,6 +3,7 @@ import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class gifttingForm extends StatefulWidget{
   _gifttingFormState createState() => _gifttingFormState();
 }
@@ -11,8 +12,9 @@ class _gifttingFormState extends State<gifttingForm>{
   final _formKey = GlobalKey<FormState>();
   final TextEditingController mycontroller = new TextEditingController();
 static DateTime current = DateTime.now();
-  String dropdownvalue2 = 'المناسبة';
+  String ocassion = 'المناسبة';
   var items2 = ['المناسبة', 'Item 2', 'Item 3', 'Item 4', 'Item 5',];
+   static bool check =false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ static DateTime current = DateTime.now();
             Stack(
               alignment: Alignment.bottomRight,
               children: [Container(height: 365.h,
+               width: 1000.w,
                child: Image.asset('assets/image/celebrityim.png', color: Colors.white.withOpacity(0.60), colorBlendMode: BlendMode.modulate,fit: BoxFit.cover,)),
                  const Padding(
                    padding: EdgeInsets.all(20.0),
@@ -47,13 +50,16 @@ static DateTime current = DateTime.now();
               SizedBox(height: 30,),
 
 
-              paddingg(15, 15, 12,Container(
-                decoration: BoxDecoration( color: textFieldBlack2.withOpacity(0.70),  borderRadius: BorderRadius.circular(8),),
-                child: DropdownButtonFormField(value: dropdownvalue2, dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items2.map((String items) {
-                  return DropdownMenuItem(value: items, child: paddingg(15.w, 15.w, 5.h,Text(items),),);}).toList(),
-                  onChanged: (String? newValue) {setState(() {dropdownvalue2 = newValue!;});},
-                  style: TextStyle(color: white, fontSize: 14.sp),
-                  isExpanded: true,),),),
+              paddingg(15, 15, 12,SizedBox(
+                height: 45.h,
+                child: Container(
+                  decoration: BoxDecoration( color: textFieldBlack2.withOpacity(0.70),  borderRadius: BorderRadius.circular(8),),
+                  child: DropdownButtonFormField( decoration: InputDecoration.collapsed(hintText: ocassion,),value: ocassion, dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items2.map((String items) {
+                    return DropdownMenuItem(value: items, child: paddingg(15.w, 15.w, 5.h,Text(items),),);}).toList(),
+                    onChanged: (String? newValue) {setState(() {ocassion = newValue!;});},
+                    style: TextStyle(color: white, fontSize: 14.sp),
+                    isExpanded: true,),),
+              ),),
 
               paddingg(15.w, 15.w, 12.h,textFieldDesc(context, 'تفاصيل الاهداء', 12.sp, true, mycontroller,(String? value) {if (value == null || value.isEmpty) {
                 return 'Please enter some text';} return null;},),),
@@ -72,12 +78,17 @@ static DateTime current = DateTime.now();
               )),),
 
 
-              paddingg(0,0,12.h,CheckboxListTile(
+              paddingg(0,0,12.h, CheckboxListTile(
                 controlAffinity: ListTileControlAffinity.leading,
                 title: text(context,'عند طلب الاهداء، فإنك توافق على شروط الإستخدام و سياسة الخصوصية الخاصة بـ', 10, black, fontWeight: FontWeight.bold,family:'Cairo'),
-                value: false,
+                value: check,
+                selectedTileColor: black,
                 onChanged: (value) {
-
+                  setState(() {
+                    setState(() {
+                      check = value!;
+                    });
+                  });
                 },),),
               Container(
                 alignment: Alignment.bottomCenter,

@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:celepraty/Models/Methods/method.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:image_picker/image_picker.dart';
 
 class advArea extends StatefulWidget{
   _advAreaState createState() => _advAreaState();
@@ -12,6 +16,8 @@ class _advAreaState extends State<advArea>{
   final TextEditingController controlName = new TextEditingController();
   final TextEditingController controlEmail = new TextEditingController();
   final TextEditingController controlDesc = new TextEditingController();
+
+  File? image;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +43,7 @@ class _advAreaState extends State<advArea>{
 
 
           const SizedBox(height: 20,),
-          paddingg(15, 15, 12, uploadImg(200, 54,text(context, 'قم برفع الصورة التي تريد وضعها بالاعلان', 12, black),(){}),),
+          paddingg(15, 15, 12, uploadImg(200, 54,text(context, 'قم برفع الصورة التي تريد وضعها بالاعلان', 12, black),(){pickImage();}),),
 
 
           const SizedBox(height: 30,),
@@ -46,4 +52,16 @@ class _advAreaState extends State<advArea>{
         ]),
         ),
 
-        )))));}}
+        )))));}
+
+        Future pickImage() async {
+    try{
+             final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+             if(image == null) return;
+             final temp = File(image.path);
+             setState(() {
+               this.image = temp;
+             });}on PlatformException catch (e){print('could not pick image $e');
+    }
+        }
+}

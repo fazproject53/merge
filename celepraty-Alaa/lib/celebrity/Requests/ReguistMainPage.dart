@@ -18,7 +18,7 @@ class _RequestMainPageState extends State<RequestMainPage> {
       textDirection: TextDirection.rtl,
       child:
        Scaffold(
-        appBar: drowAppBar(requestBar),
+        //appBar: drowAppBar(requestBar),
         body: padding(33, 33, Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children:  [

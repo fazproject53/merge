@@ -62,29 +62,38 @@ class profileInformaion extends StatefulWidget{
 
                     paddingg(15, 15, 12, Container(
                       decoration: BoxDecoration(   color: textFieldBlack2.withOpacity(0.70),  borderRadius: BorderRadius.circular(10),),
-                      child: DropdownButtonFormField(
-                            value: country, dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items.map((String items) {
-                            return DropdownMenuItem(value: items, child: paddingg(15, 15, 5,Text(items),),);}).toList(),
-                                     onChanged: (String? newValue) {setState(() {country = newValue!;});},
-                                     style: TextStyle(color: white, fontSize: 14.sp),
-                                     isExpanded: true,),
+                      child: SizedBox(
+                        height: 45.h,
+                        child: DropdownButtonFormField(decoration: InputDecoration.collapsed(hintText: country,),
+                              value: country, dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items.map((String items) {
+                              return DropdownMenuItem(value: items, child: paddingg(15, 15, 5,Text(items),),);}).toList(),
+                                       onChanged: (String? newValue) {setState(() {country = newValue!;});},
+                                       style: TextStyle(color: white, fontSize: 14.sp),
+                                       isExpanded: true, ),
+                      ),
                     ),),
 
-                    paddingg(15, 15, 12,Container(
-                      decoration: BoxDecoration(   color: textFieldBlack2.withOpacity(0.70),  borderRadius: BorderRadius.circular(10),),
-                      child: DropdownButtonFormField(value: city,dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items2.map((String items) {
-                        return DropdownMenuItem(value: items, child: paddingg(15, 15, 5,Text(items),),);}).toList(),
-                        onChanged: (String? newValue) {setState(() {city = newValue!;});},
-                        style: TextStyle(color: white, fontSize: 14.sp),
-                        isExpanded: true,),),),
-
-                      paddingg(15, 15, 12, Container(
+                    paddingg(15, 15, 12,SizedBox(
+                      height: 45.h,
+                      child: Container(
                         decoration: BoxDecoration(   color: textFieldBlack2.withOpacity(0.70),  borderRadius: BorderRadius.circular(10),),
-                      child: DropdownButtonFormField(value: category,dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items3.map((String items) {
-                        return DropdownMenuItem(value: items, child: paddingg(15, 15, 5,Text(items),),);}).toList(),
-                        onChanged: (String? newValue) {setState(() {category = newValue!;});},
-                        style: TextStyle(color: white, fontSize: 14.sp),
-                        isExpanded: true,),),),
+                        child: DropdownButtonFormField(  decoration: InputDecoration.collapsed(hintText: city,),value: city,dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items2.map((String items) {
+                          return DropdownMenuItem(value: items, child: paddingg(15, 15, 5,Text(items),),);}).toList(),
+                          onChanged: (String? newValue) {setState(() {city = newValue!;});},
+                          style: TextStyle(color: white, fontSize: 14.sp),
+                          isExpanded: true,),),
+                    ),),
+
+                      paddingg(15, 15, 12, SizedBox(
+                        height: 45.h,
+                        child: Container(
+                          decoration: BoxDecoration(   color: textFieldBlack2.withOpacity(0.70),  borderRadius: BorderRadius.circular(10),),
+                        child: DropdownButtonFormField( decoration: InputDecoration.collapsed(hintText: category,),value: category,dropdownColor: textBlack, icon: const Icon(Icons.keyboard_arrow_down, color: Colors.white,), items: items3.map((String items) {
+                          return DropdownMenuItem(value: items, child: paddingg(15, 15, 5,Text(items),),);}).toList(),
+                          onChanged: (String? newValue) {setState(() {category = newValue!;});},
+                          style: TextStyle(color: white, fontSize: 14.sp),
+                          isExpanded: true,),),
+                      ),),
 
                    //=========== end dropdown ==================================
 
