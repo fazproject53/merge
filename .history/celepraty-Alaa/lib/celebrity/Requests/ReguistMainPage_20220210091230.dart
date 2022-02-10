@@ -1,7 +1,7 @@
 import 'package:celepraty/Models/Methods/method.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
-import 'package:celepraty/celebrity/Requests/Gift/Gift.dart';
 import 'package:flutter/material.dart';
+import 'package:folding_cell/folding_cell.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
