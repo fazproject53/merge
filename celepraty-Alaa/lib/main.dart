@@ -1,4 +1,5 @@
 import 'package:celepraty/Models/Variabls/varaibles.dart';
+import 'package:celepraty/celebrity/Requests/ReguistMainPage.dart';
 import 'package:celepraty/celebrity/blockList.dart';
 import 'package:celepraty/celebrity/celebrityHomePage.dart';
 import 'package:celepraty/celebrity/orders/gifttingForm.dart';

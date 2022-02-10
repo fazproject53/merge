@@ -18,6 +18,7 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
     return   Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: drowAppBar('الصفحة الرئيسية'),
             body: Container(
                     alignment: Alignment.bottomCenter,
               height: 800.h,

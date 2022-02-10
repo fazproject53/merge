@@ -21,8 +21,7 @@ class _celebratyProfileState extends State<celebratyProfile>{
 @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      //appBar: AppBar(backgroundColor:  Colors.white,),
+      appBar: drowAppBar('حسابي'),
       body:Directionality(
         textDirection: TextDirection.rtl,
         child: Center(
@@ -33,7 +32,7 @@ class _celebratyProfileState extends State<celebratyProfile>{
 
                   Column(
                     children: [
-                      const SizedBox(height: 70,),
+                       SizedBox(height: 30.h,),
                       padding(8, 8 ,Container(height:56.h, width: 56.w ,child: CircleAvatar( radius: 48.r, child: Image.network('http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png'))),),
                       padding(8, 8,text(context,'مروان بابلو', 20, black, fontWeight: FontWeight.bold, family: 'Cairo'),),
                       padding(8, 8,text(context,'الفئة : مطرب ', 12, textBlack, family: 'Cairo' ),),

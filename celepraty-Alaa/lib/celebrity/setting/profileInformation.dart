@@ -33,6 +33,7 @@ class profileInformaion extends StatefulWidget{
         @override
         Widget build(BuildContext context) {
         return Scaffold(
+        appBar: drowAppBar('المعلومات الشخصية'),
         body: Directionality(
         textDirection: TextDirection.rtl,
         child: SingleChildScrollView(
@@ -42,7 +43,7 @@ class profileInformaion extends StatefulWidget{
               child: paddingg(12, 12, 5, Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                  SizedBox(height: 80.h,),
+                  SizedBox(height: 30.h,),
                     padding(10, 12, Container( alignment : Alignment.topRight,child: Text('قم بملئ او تعديل \n معلوماتك الشخصية', style: const TextStyle(fontSize: 18, color: textBlack , fontFamily: 'Cairo'), )),),
 
                     //========================== form ===============================================
