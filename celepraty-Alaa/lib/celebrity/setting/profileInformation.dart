@@ -50,13 +50,13 @@ class profileInformaion extends StatefulWidget{
                     SizedBox(height: 30,),
 
                     paddingg(15, 15, 12,textFieldNoIcon(context, 'الاسم', 12, false, name,(String? value) {if (value == null || value.isEmpty) {
-                        return 'Please enter some text';} return null;},),),
+                        return 'Please enter some text';} return null;},false),),
                     paddingg(15, 15, 12,textFieldNoIcon(context, 'البريد الالكتروني', 12, false, email,(String? value) {if (value == null || value.isEmpty) {
-                      return 'Please enter some text';} return null;},),),
+                      return 'Please enter some text';} return null;},false),),
                     paddingg(15, 15, 12,textFieldNoIcon(context, 'كلمة المرور', 12, true, password,(String? value) {if (value == null || value.isEmpty) {
-                      return 'Please enter some text';} return null;},),),
+                      return 'Please enter some text';} return null;},false),),
                     paddingg(15, 15, 12,textFieldNoIcon(context, 'رقم الجوال', 12, false, phone,(String? value) {if (value == null || value.isEmpty) {
-                      return 'Please enter some text';} return null;},),),
+                      return 'Please enter some text';} return null;},false),),
 
                     //===========dropdown lists ==================
 
@@ -98,7 +98,7 @@ class profileInformaion extends StatefulWidget{
                    //=========== end dropdown ==================================
 
                     paddingg(15, 15, 12,textFieldNoIcon(context, 'رابط الصفحة', 14, true, pageLink,(String? value) {if (value == null || value.isEmpty) {
-                      return 'Please enter some text';} return null;},),),
+                      return 'Please enter some text';} return null;},false),),
 
 
                     //===================================== اضافة روابط الصفحات =======================================================

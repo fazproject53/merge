@@ -1,6 +1,7 @@
 
 import 'package:celepraty/Models/Methods/method.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
+import 'package:celepraty/celebrity/blockList.dart';
 import 'package:celepraty/celebrity/setting/profileInformation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,7 +15,7 @@ class _celebratyProfileState extends State<celebratyProfile>{
     ,'المحادثات','الدعم','تسجيل الخروج'];
   final List<IconData> icons = [nameIcon , invoice, money,price,orders,store,copun, scheduale,studio,pages,block,chat,support,logout];
   final List<Widget> page = [profileInformaion(),profileInformaion(), profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion()
-       , profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion()];
+       , profileInformaion(),profileInformaion(),blockList(),profileInformaion(),profileInformaion(),profileInformaion()];
 
 
 @override

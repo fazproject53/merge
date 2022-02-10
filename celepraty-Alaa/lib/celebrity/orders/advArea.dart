@@ -35,15 +35,15 @@ class _advAreaState extends State<advArea>{
 
           SizedBox(height: 20.h,),
           paddingg(15, 15, 12,textFieldNoIcon(context, 'الاسم', 12, false, controlName,(String? value) {if (value == null || value.isEmpty) {
-            return 'Please enter some text';} return null;},),),
+            return 'Please enter some text';} return null;},false),),
           paddingg(15, 15, 12,textFieldNoIcon(context, 'البريد الالكتروني', 12, false, controlEmail,(String? value) {if (value == null || value.isEmpty) {
-            return 'Please enter some text';} return null;},),),
+            return 'Please enter some text';} return null;},false),),
           paddingg(15, 15, 12,textFieldDesc(context, 'الوصف الخاص بالمساحة', 12, false, controlDesc,(String? value) {if (value == null || value.isEmpty) {
             return 'Please enter some text';} return null;},),),
 
 
           const SizedBox(height: 20,),
-          paddingg(15, 15, 12, uploadImg(200, 54,text(context, 'قم برفع الصورة التي تريد وضعها بالاعلان', 12, black),(){pickImage();}),),
+          paddingg(15, 15, 12, uploadImg(200, 54,text(context, 'قم برفع الصورة التي تريد وضعها بالاعلان', 12, black),(){pickImage(image);}),),
 
 
           const SizedBox(height: 30,),
@@ -54,14 +54,5 @@ class _advAreaState extends State<advArea>{
 
         )))));}
 
-        Future pickImage() async {
-    try{
-             final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-             if(image == null) return;
-             final temp = File(image.path);
-             setState(() {
-               this.image = temp;
-             });}on PlatformException catch (e){print('could not pick image $e');
-    }
-        }
+
 }

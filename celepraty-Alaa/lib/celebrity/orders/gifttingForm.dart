@@ -28,7 +28,7 @@ static DateTime current = DateTime.now();
               alignment: Alignment.bottomRight,
               children: [Container(height: 365.h,
                width: 1000.w,
-               child: Image.asset('assets/image/celebrityim.png', color: Colors.white.withOpacity(0.60), colorBlendMode: BlendMode.modulate,fit: BoxFit.cover,)),
+               child: Image.asset('assets/image/featured.png', color: Colors.white.withOpacity(0.60), colorBlendMode: BlendMode.modulate,fit: BoxFit.cover,)),
                  const Padding(
                    padding: EdgeInsets.all(20.0),
                    child: Text('اطلب اهداء \n شخصي من ليجسي ميوزك الان',
@@ -61,20 +61,26 @@ static DateTime current = DateTime.now();
                     isExpanded: true,),),
               ),),
 
+              paddingg(15.w, 15.w, 12.h,textFieldNoIcon(context, 'صاحب الاهداء', 12.sp, true, mycontroller,(String? value) {if (value == null || value.isEmpty) {
+                return 'Please enter some text';} return null;},false),),
+              paddingg(15.w, 15.w, 12.h,textFieldNoIcon(context, 'المهدى اليه', 12.sp, true, mycontroller,(String? value) {if (value == null || value.isEmpty) {
+                return 'Please enter some text';} return null;}, false),),
+
               paddingg(15.w, 15.w, 12.h,textFieldDesc(context, 'تفاصيل الاهداء', 12.sp, true, mycontroller,(String? value) {if (value == null || value.isEmpty) {
                 return 'Please enter some text';} return null;},),),
               paddingg(15.w, 15.w, 12.h,textFieldNoIcon(context, 'ادخل كود الخصم', 12.sp, true, mycontroller,(String? value) {if (value == null || value.isEmpty) {
-                return 'Please enter some text';} return null;}),),
+                return 'Please enter some text';} return null;},true),),
 
 
-              paddingg(250.w, 15.w, 15.h,SizedBox(height: 45.h,child: InkWell(
+              paddingg(15.w, 15.w, 15.h,SizedBox(height: 45.h,child: InkWell(
                 child: gradientContainerNoborder(50.w, Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(scheduale, color: white,),
+                    SizedBox(width: 15.w,),
                     text(context, 'تاريخ الاهداء', 15.sp, white, fontWeight: FontWeight.bold),
                   ],
-                )),onTap: (){ tc(context);},
+                )),onTap: (){ tableCalendar(context, current);},
               )),),
 
 
@@ -90,15 +96,9 @@ static DateTime current = DateTime.now();
                     });
                   });
                 },),),
-              Container(
-                alignment: Alignment.bottomCenter,
-                height: 80.h,
-                child: Container(
-                height: 50.h,
-                child: InkWell(child: gradientContainerNoborder(400.w, Center(child: text(context, 'رفع الطلب', 16, white, fontWeight: FontWeight.bold) )),
-                    onTap: (){}),
-                ),),
-              SizedBox(height: 20.h,)
+              const SizedBox(height: 30,),
+              padding(15, 15, gradientContainerNoborder(getSize(context).width,  buttoms(context, 'رفع الطلب', 15, white, (){})),),
+              const SizedBox(height: 30,),
 
 
 
@@ -111,22 +111,5 @@ static DateTime current = DateTime.now();
 
 
   }
-  Future<void> tc(context)async {
-     final DateTime picked =  showDatePicker(
-         context: context,
-         initialDate: current,
-         firstDate: DateTime(2020,1,1),
-         lastDate: DateTime(2025,1,1),
-     builder: (context, child){
-           return Theme(data: ThemeData.light().copyWith(colorScheme: const ColorScheme.light(
-             primary: purple, onPrimary: white
-           )), child: child!);
-     }) as DateTime;
-     if(picked!= null && picked != current) {
-       setState(() {
-         current = picked;
-       });
-     }
 
-
-  }}
+}

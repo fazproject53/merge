@@ -5,6 +5,7 @@ import 'package:celepraty/celebrity/orders/advArea.dart';
 import 'package:celepraty/celebrity/orders/gifttingForm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:celepraty/celebrity/orders/advForm.dart';
 
 class celebrityHomePage extends StatefulWidget{
   _celebrityHomePageState createState() => _celebrityHomePageState();
@@ -49,7 +50,7 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
                   children: [
                     InkWell(
                       child: Container(
-                          decoration: const BoxDecoration(gradient: LinearGradient(colors: <Color>[pink, blue, purple],
+                          decoration: const BoxDecoration(gradient: LinearGradient(colors: <Color>[pink, blue],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight),
                               borderRadius:  BorderRadius.all( Radius.circular(50))),
@@ -67,7 +68,7 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
                         decoration: BoxDecoration(border: Border.all( color: border), borderRadius: const BorderRadius.all( Radius.circular(10))),
                         height: 70.h, width: 70.w,
                         child: Center(child: GradientIcon(copun, 40.0.w,
-                            const LinearGradient(colors: <Color>[pink, blue, purple],
+                            const LinearGradient(colors: <Color>[pink, blue],
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight))) )],),
                 ),
@@ -79,9 +80,9 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
                   children: [
                     InkWell(
                       child: Container(
-                          decoration: const BoxDecoration(gradient:  LinearGradient(colors: <Color>[pink, blue, purple],begin: Alignment.topLeft,
+                          decoration: const BoxDecoration(gradient:  LinearGradient(colors: <Color>[pink, blue],begin: Alignment.topLeft,
                               end: Alignment.bottomRight), borderRadius:  BorderRadius.all(const Radius.circular(70))), height: 40.h,width: 40.h, child: Center(child: Icon( arrow,size: 25.w,color: white))),
-                      onTap: (){},),
+                      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => advForm() ),);},),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -93,7 +94,7 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
                     Container(
                         decoration: BoxDecoration(border: Border.all(color: border), borderRadius: const BorderRadius.all(const Radius.circular(10))),
                         alignment: Alignment.centerRight, height: 70.h, width: 70.w,
-                        child:Center(child: GradientIcon(ad, 40.0.w, const LinearGradient(colors: <Color>[pink, blue, purple],
+                        child:Center(child: GradientIcon(ad, 40.0.w, const LinearGradient(colors: <Color>[pink, blue],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight))) )],),
             ),
@@ -105,7 +106,7 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
                   children: [
                     InkWell(
                       child: Container(
-                          decoration: const BoxDecoration(gradient:  LinearGradient(colors: <Color>[pink, blue, purple],begin: Alignment.topLeft,
+                          decoration: const BoxDecoration(gradient:  LinearGradient(colors: <Color>[pink, blue],begin: Alignment.topLeft,
                               end: Alignment.bottomRight), borderRadius:  BorderRadius.all(const Radius.circular(50))), height: 40.h,width: 40.h ,child: Center(child: Icon( arrow,size: 25.w,color: white))),
                       onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => advArea() ),);}, ),
                     Column(
@@ -119,7 +120,7 @@ class _celebrityHomePageState extends State<celebrityHomePage> {
                     Container(
                         decoration: BoxDecoration(border: Border.all(color: border),borderRadius: const BorderRadius.all(const Radius.circular(10))),
                         alignment: Alignment.centerRight, height: 70.h, width: 70.w,
-                        child: Center(child: GradientIcon(adArea, 40.0.w,  const LinearGradient(colors: <Color>[pink, blue, purple],
+                        child: Center(child: GradientIcon(adArea, 40.0.w,  const LinearGradient(colors: <Color>[pink, blue],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight))) )],),
                   ),

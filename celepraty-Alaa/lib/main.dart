@@ -1,6 +1,8 @@
 import 'package:celepraty/Models/Variabls/varaibles.dart';
+import 'package:celepraty/celebrity/blockList.dart';
 import 'package:celepraty/celebrity/celebrityHomePage.dart';
 import 'package:celepraty/celebrity/orders/gifttingForm.dart';
+import 'package:celepraty/celebrity/setting/celebratyProfile.dart';
 import 'package:celepraty/celebrity/setting/profileInformation.dart';
 import 'package:celepraty/introduction_screen/src/introduction_screen_main.dart';
 import './celebrity/orders/advArea.dart';

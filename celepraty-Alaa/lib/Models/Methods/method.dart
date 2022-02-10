@@ -1,10 +1,14 @@
 //================ convert hex colors to rgb colors================
+import 'dart:core';
+import 'dart:io';
 import 'package:celepraty/Models/Methods/classes/GradientIcon.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:image_picker/image_picker.dart';
 
 
 //===============================Text===============================
@@ -95,8 +99,30 @@ Widget gradientContainerNoborder(double width,Widget child) {
     width: width.w,
     child:child,
     decoration: BoxDecoration(
-      boxShadow: const [BoxShadow(color: darkWhite, blurRadius: 5, offset: Offset(4,6))],
-      borderRadius: BorderRadius.circular(10.0),
+      boxShadow: const [BoxShadow(color: darkWhite, blurRadius: 5, offset: Offset(2,3))],
+      borderRadius: BorderRadius.circular(8.0),
+      gradient: const LinearGradient(
+        begin: Alignment(0.7, 2.0),
+        end: Alignment(-0.69, -1.0),
+        colors: [Color(0xff0ab3d0), Color(0xffe468ca)],
+        stops: [0.0, 1.0],
+      ),
+
+    ),
+
+
+  );
+}
+//==================== container with no shadow ===========================
+
+Widget gradientContainerNoborder2(double width,double height,Widget child) {
+
+  return Container(
+    width: width.w,
+    child:child,
+    height:height,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(8.0),
       gradient: const LinearGradient(
         begin: Alignment(0.7, 2.0),
         end: Alignment(-0.69, -1.0),
@@ -269,6 +295,7 @@ Widget textFieldNoIcon(
     bool hintPass,
     TextEditingController mycontroller,
     myvali,
+    isOptional
     ) {
   return TextFormField(
     obscureText: hintPass,
@@ -278,10 +305,13 @@ Widget textFieldNoIcon(
     decoration: InputDecoration(
         isDense: false,
         filled: true,
+        helperText: isOptional? 'اختياري': null,
+        helperStyle: TextStyle(color: pink, fontSize: fontSize.sp, fontFamily: 'Cairo'),
         hintStyle: TextStyle(color: black, fontSize: fontSize.sp, fontFamily: 'Cairo'),
         fillColor: textFieldBlack2.withOpacity(0.70),
         labelStyle: TextStyle(color: white, fontSize: fontSize.sp),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
+        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: pink,width: 1)),
         labelText: key,
 
         contentPadding: EdgeInsets.all(10.h)),
@@ -314,14 +344,15 @@ Widget textFieldDesc(
           fillColor: textFieldBlack2.withOpacity(0.70),
           labelStyle: TextStyle(color: white, fontSize: fontSize.sp,), alignLabelWithHint: true,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
+          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: pink,width: 1)),
           labelText: key,
-
-
           contentPadding: EdgeInsets.all(10.h)),
     ),
   );
 
 }
+
+//============================ text feild curved from one side ==================================
 
 Widget textFieldNoIcon2(
     context,
@@ -343,6 +374,7 @@ Widget textFieldNoIcon2(
         fillColor: textFieldBlack2.withOpacity(0.70),
         labelStyle: TextStyle(color: white, fontSize: fontSize.sp),
         border: OutlineInputBorder(borderRadius: BorderRadius.only( bottomRight: Radius.circular(10.0), topRight: Radius.circular(10.0),)),
+        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: pink,width: 1)),
         labelText: key,
 
         contentPadding: EdgeInsets.all(10.h)),
@@ -401,7 +433,7 @@ Widget textFeildWithButton(context, child1, child2) {
       child:Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children:[GradientIcon(attach, 30.w, const LinearGradient(colors: <Color>[pink, blue, purple])), child]),
+          children:[GradientIcon(attach, 30.w, const LinearGradient(colors: <Color>[pink, blue])), child]),
       decoration:  BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8)), border: Border.all(color: black)),
     ),
     onTap: onTap,
@@ -409,3 +441,52 @@ Widget textFeildWithButton(context, child1, child2) {
 
   }
 
+  //============================== Calendar ===========================================
+
+Future<void> tableCalendar(context, dateTime)async {
+  final DateTime picked = showDatePicker(
+      context: context,
+      initialDate: dateTime,
+      firstDate: DateTime(2020, 1, 1),
+      lastDate: DateTime(2025, 1, 1),
+      builder: (context, child) {
+        return Theme(data: ThemeData.light().copyWith(
+            colorScheme: const ColorScheme.light(
+                primary: purple, onPrimary: white
+            )), child: child!);
+      }) as DateTime;
+  if (picked != null && picked != dateTime) {
+    dateTime = picked;
+  }
+}
+
+//====================== image file picker ===================================
+Future  pickImage(imagee) async {
+  try{
+    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if(image == null) return;
+    final temp = File(image.path);
+    imagee = temp;
+    }on PlatformException catch (e){print('could not pick image $e');}
+}
+Widget buildCkechboxList(list){
+  List<Widget> w = [];
+  Widget cb;
+  for(var i =0 ; i< list.length; i++){
+    cb= Expanded(
+      child:
+      Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: Row(
+          children: [
+            Checkbox(value: false, onChanged: (value){}),
+            Text(list[i])
+          ],
+        ),
+      ),
+    );
+    w.add(cb);}
+
+  return Row(mainAxisAlignment: MainAxisAlignment.start,
+      children: w);
+}
