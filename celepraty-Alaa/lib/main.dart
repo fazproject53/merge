@@ -1,4 +1,5 @@
 import 'package:celepraty/Models/Variabls/varaibles.dart';
+import 'package:celepraty/celebrity/DiscountCodes/discount_codes_main.dart';
 import 'package:celepraty/celebrity/Requests/ReguistMainPage.dart';
 import 'package:celepraty/celebrity/blockList.dart';
 import 'package:celepraty/celebrity/celebrityHomePage.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: "Cairo",
               colorScheme: ColorScheme.fromSwatch().copyWith(primary: pinkLigth),),
-            home: celebrityHomePage()
+            home: DiscountCodes()
             //----------------------------------
           ),
       ),
