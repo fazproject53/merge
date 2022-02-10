@@ -73,12 +73,11 @@ Widget container(double height, double width, double marginL, double marginR,
     child: child,
   );
 }
-
 //gradient contaner------------------------------------------------------------------
-Widget gradientContainer(double width, Widget child,{bool gradient =false}) {
+Widget gradientContainer(double width, Widget child,{bool gradient =false,double height=45}) {
   return Container(
     width: width.w,
-    // height: height.h,
+    height: height.h,
     child: child,
     decoration: BoxDecoration(
      
@@ -93,6 +92,7 @@ Widget gradientContainer(double width, Widget child,{bool gradient =false}) {
     ),
   );
 }
+
 Widget gradientContainerNoborder(double width,Widget child) {
 
   return Container(
@@ -489,4 +489,36 @@ Widget buildCkechboxList(list){
 
   return Row(mainAxisAlignment: MainAxisAlignment.start,
       children: w);
+}
+
+divider({double thickness= 2, double indent=15,double endIndent=15,}){
+  return Align(
+      alignment: Alignment.topCenter,
+     
+        child: VerticalDivider(
+          color: Colors.grey[400],
+          thickness: thickness,
+          indent: indent,
+          endIndent: endIndent,
+         //width: 12,
+        ),
+      );
+}
+//Drow app bar----------------------------------------------------
+
+ drowAppBar(String titel){
+  return AppBar(
+    title: Text(titel,style:TextStyle(
+      fontSize:22.sp, 
+      fontFamily: 'Cairo',
+      color: black
+    ),
+    
+    ),
+    centerTitle: true,
+    leading: back,
+    backgroundColor: deepwhite,
+    elevation: 0,
+    
+  );
 }
