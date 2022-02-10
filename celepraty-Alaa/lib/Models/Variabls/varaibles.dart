@@ -74,11 +74,26 @@ String avd4=staticPath+"avd4.jpg";
 List<String>countryName=[ "السعودية","الامارات","البحرين","الكويت","المانيا", "ماليزيا","قطر", "الجزائر","لبنان","سنغافورة","تركيا","الصين","فرنسا","الهند","مصر","العراق""الاردن""امريكا""كوريا"];
 //font textScaling
 double textScaling = 2.7;
-List<String>image=[
+List<String>AdsImage=[
  "assets/image/adv1.jpg" ,
  "assets/image/adv2.jpg" ,
   "assets/image/adv3.jpg" ,
   "assets/image/adv4.jpg" 
   ];
+
+List<String>giftImage=[
+ "assets/image/gift1.jpg" ,
+ "assets/image/gift2.jpg" ,
+  "assets/image/gift3.jpg" ,
+  "assets/image/gift5.jpg" 
+  ];
+
+  List<String>giftType=[
+ "عيد ميلاد" ,
+ "تخرج" ,
+ "عيد الام" ,
+ "زواج" 
+  ];
+  
 
 //Request page virable name------------------------------------------------------

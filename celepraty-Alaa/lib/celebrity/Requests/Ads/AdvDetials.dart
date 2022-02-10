@@ -34,7 +34,7 @@ class _AdvDetialsState extends State<AdvDetials> {
                 ),
                 image: DecorationImage(
                   image: AssetImage(
-                    image[widget.i!],
+                    AdsImage[widget.i!],
                   ),
                   fit: BoxFit.fill,
                 )),
