@@ -93,10 +93,11 @@ Widget gradientContainer(double width, Widget child,{bool gradient =false,double
   );
 }
 
-Widget gradientContainerNoborder(double width,Widget child) {
+Widget gradientContainerNoborder(double width,Widget child, {double height = 46.0}) {
 
   return Container(
     width: width.w,
+    height: height.h,
     child:child,
     decoration: BoxDecoration(
       boxShadow: const [BoxShadow(color: darkWhite, blurRadius: 5, offset: Offset(2,3))],

@@ -1,8 +1,10 @@
 import 'package:celepraty/Models/Variabls/varaibles.dart';
-
+<<<<<<< HEAD
+=======
 import 'package:celepraty/celebrity/DiscountCodes/discount_codes_main.dart';
 import 'package:celepraty/celebrity/Requests/ReguistMainPage.dart';
 import 'package:celepraty/celebrity/blockList.dart';
+>>>>>>> 3d7f0981a638a6ab6c426c2c0bcce200717c122c
 import 'package:celepraty/celebrity/celebrityHomePage.dart';
 
 import 'package:flutter/material.dart';

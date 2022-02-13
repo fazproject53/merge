@@ -21,6 +21,7 @@ class _advAreaState extends State<advArea>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: drowAppBar('مساحة اعلانية'),
         body: Directionality(
         textDirection: TextDirection.rtl,
         child: SingleChildScrollView(
@@ -30,7 +31,7 @@ class _advAreaState extends State<advArea>{
         child: paddingg(12, 12, 5, Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-        SizedBox(height: 80.h,),
+        SizedBox(height: 30.h,),
           padding(10, 12, Container( alignment : Alignment.topRight,child:  Text(' اطلب مسلحتك\n الاعلانية', style: TextStyle(fontSize: 18.sp, color: textBlack , fontFamily: 'Cairo'), )),),
 
           SizedBox(height: 20.h,),

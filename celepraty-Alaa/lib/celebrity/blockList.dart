@@ -14,21 +14,10 @@ class _blockListState extends State<blockList> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: drowAppBar('المحظورين'),
       body: Stack(children: [
-         Container(
-           height: 350.h,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.0),
-          gradient:  LinearGradient(
-            begin: Alignment(0.7, 2.0),
-            end: Alignment(-0.69, -1.0),
-            colors: [Color(0xff0ab3d0).withOpacity(0.65), Color(0xffe468ca).withOpacity(0.80)],
-            stops: [0.0, 1.0],
-          ),
 
-        ),
-      ),
-        paddingg( 10,10,70,ListView.builder(
+        paddingg( 10,10,20,ListView.builder(
             itemCount: 5,
             itemBuilder: (context, index) {
             return paddingg(8,8,5 ,SizedBox(
