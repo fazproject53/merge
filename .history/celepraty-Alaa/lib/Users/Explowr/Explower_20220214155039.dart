@@ -94,7 +94,10 @@ class _ExplowerState extends State<Explower> {
                     radius: 20.h,
                     child: IconButton(
                         onPressed: () {},
-                        icon: GradientIcon(like, 20.sp, gradient())),
+                        icon: GradientIcon(
+                            like,
+                            14,
+                            gradient)),
                   ),
                 ),
               ),
@@ -103,6 +106,12 @@ class _ExplowerState extends State<Explower> {
           ),
         ));
   }
-
- 
+  gradient(){
+    LinearGradient(
+                              begin: Alignment(0.7, 2.0),
+                              end: Alignment(-0.69, -1.0),
+                              colors: [Color(0xff0ab3d0), Color(0xffe468ca)],
+                              stops: [0.0, 1.0],
+                            );
+  }
 }

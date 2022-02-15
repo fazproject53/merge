@@ -65,12 +65,7 @@ class _ExplowerState extends State<Explower> {
         child: Container(
           decoration: BoxDecoration(
               color: black,
-              image: DecorationImage(
-                image: AssetImage(
-                  videoImage,
-                ),
-                fit: BoxFit.cover,
-              )),
+              image: DecorationImage(image: AssetImage(videoImage,),fit: BoxFit.cover,)),
           child: Stack(
             children: [
 //image+titel+subtitel------------------------------------------
@@ -93,8 +88,7 @@ class _ExplowerState extends State<Explower> {
                     backgroundColor: deepwhite,
                     radius: 20.h,
                     child: IconButton(
-                        onPressed: () {},
-                        icon: GradientIcon(like, 20.sp, gradient())),
+                        onPressed: () {}, icon: GradientIcon(like, size, gradient)),
                   ),
                 ),
               ),
@@ -103,6 +97,4 @@ class _ExplowerState extends State<Explower> {
           ),
         ));
   }
-
- 
 }

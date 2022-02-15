@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:device_preview/device_preview.dart';
 
-import 'Account/logging.dart';
 import 'celebrity/Requests/ReguistMainPage.dart';
 
 
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: () => MaterialApp(
-          home:Logging(),
+          home:Lo(),
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: "Cairo",
               colorScheme: ColorScheme.fromSwatch().copyWith(primary: pinkLigth),),

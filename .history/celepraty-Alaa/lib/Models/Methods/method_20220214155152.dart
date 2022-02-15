@@ -92,7 +92,7 @@ Widget gradientContainer(double width, Widget child,{bool gradient =false,double
     ),
   );
 }
-//gradient color---------------------------------------------------------------------
+
  LinearGradient gradient() {
     return const LinearGradient(
       begin: Alignment(0.7, 2.0),

@@ -108,7 +108,7 @@ class _SingUpState extends State<SingUp> {
                         height: 14.h,
                       ),
                       text(context, "او التسجيل من خلال", 9, darkWhite,
-                      align: TextAlign.center,
+                      align: Align.Center
                       ),
                       SizedBox(
                         height: 14.h,

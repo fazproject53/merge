@@ -1,4 +1,3 @@
-import 'package:celepraty/Models/Methods/classes/GradientIcon.dart';
 import 'package:celepraty/Models/Methods/method.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:flutter/material.dart';
@@ -65,12 +64,7 @@ class _ExplowerState extends State<Explower> {
         child: Container(
           decoration: BoxDecoration(
               color: black,
-              image: DecorationImage(
-                image: AssetImage(
-                  videoImage,
-                ),
-                fit: BoxFit.cover,
-              )),
+              image: DecorationImage(image: AssetImage(videoImage,),fit: BoxFit.cover,)),
           child: Stack(
             children: [
 //image+titel+subtitel------------------------------------------
@@ -93,8 +87,7 @@ class _ExplowerState extends State<Explower> {
                     backgroundColor: deepwhite,
                     radius: 20.h,
                     child: IconButton(
-                        onPressed: () {},
-                        icon: GradientIcon(like, 20.sp, gradient())),
+                        onPressed: () {}, icon: Ga),
                   ),
                 ),
               ),
@@ -103,6 +96,4 @@ class _ExplowerState extends State<Explower> {
           ),
         ));
   }
-
- 
 }

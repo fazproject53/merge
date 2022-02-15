@@ -94,7 +94,7 @@ class _ExplowerState extends State<Explower> {
                     radius: 20.h,
                     child: IconButton(
                         onPressed: () {},
-                        icon: GradientIcon(like, 20.sp, gradient())),
+                        icon: GradientIcon(like, 18.sp, gradient())),
                   ),
                 ),
               ),
