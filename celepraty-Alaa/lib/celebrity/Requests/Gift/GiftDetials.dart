@@ -129,6 +129,7 @@ class _GiftDetialsState extends State<GiftDetials> {
                     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
                     13,
                     deepgrey!,
+                    
                     fontWeight: FontWeight.bold,
                     //align: TextAlign.justify,
                     space: 3,

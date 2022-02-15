@@ -1,4 +1,5 @@
 import 'package:celepraty/Models/Variabls/varaibles.dart';
+import 'package:celepraty/Users/Explowr/Explower.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: () => MaterialApp(
-          home:Logging(),
+          home:Explower(),
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: "Cairo",
               colorScheme: ColorScheme.fromSwatch().copyWith(primary: pinkLigth),),

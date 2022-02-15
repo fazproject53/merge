@@ -4,6 +4,8 @@ import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'viewData.dart';
+
 class Explower extends StatefulWidget {
   const Explower({Key? key}) : super(key: key);
 
@@ -12,6 +14,9 @@ class Explower extends StatefulWidget {
 }
 
 class _ExplowerState extends State<Explower> {
+  bool isSelect = false;
+  int liksCounter = 100;
+
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -58,51 +63,93 @@ class _ExplowerState extends State<Explower> {
     );
   }
 
+//----------------view data method-------------------------------------------------------------------------------
   Widget viewCard() {
     return Card(
         elevation: 10,
         color: black,
+
         child: Container(
+
           decoration: BoxDecoration(
               color: black,
+              borderRadius: BorderRadius.all(Radius.circular(4.r) ),
               image: DecorationImage(
                 image: AssetImage(
                   videoImage,
                 ),
                 fit: BoxFit.cover,
               )),
-          child: Stack(
+          child: Column(
             children: [
-//image+titel+subtitel------------------------------------------
-              Align(
-                  alignment: Alignment.topRight,
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundImage: AssetImage(explorImage),
-                      radius: 25.h,
-                    ),
-                    title: text(context, "ليجسي", 14, white),
-                    subtitle: text(context, "# مطرب", 12, white),
-                  )),
-//like icon------------------------------------------
-              Padding(
-                padding: EdgeInsets.all(10.0.h),
+//صوره المشهور+الاسم+التصنيف------------------------------------------
+              Expanded(
+                flex: 2,
                 child: Align(
-                  alignment: Alignment.bottomLeft,
+                    alignment: Alignment.topRight,
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage(explorImage),
+                        radius: 25.h,
+                      ),
+                      title: text(context, "ليجسي", 14, white),
+                      subtitle: text(context, "# مطرب", 12, white),
+                    )),
+              ),
+//play viduo--------------------------------------------------------
+
+              Expanded(
+                flex: 1,
+                child: Align(
+                  alignment: Alignment.center,
                   child: CircleAvatar(
-                    backgroundColor: deepwhite,
-                    radius: 20.h,
+                    backgroundColor: white.withOpacity(0.12),
+                    radius: 25.h,
                     child: IconButton(
-                        onPressed: () {},
-                        icon: GradientIcon(like, 20.sp, gradient())),
+                        onPressed: () {
+                          setState(() {});
+                        },
+                        icon: GradientIcon(playViduo, 35.sp, gradient())),
                   ),
                 ),
               ),
+
 //like icon------------------------------------------
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 10.r, right: 10.r),
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: CircleAvatar(
+                      backgroundColor: white.withOpacity(0.88),
+                      radius: 20.h,
+                      child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              isSelect = !isSelect;
+                            });
+                            if (isSelect) {
+                              setState(() {
+                                liksCounter++;
+                              });
+                            }
+                          },
+                          icon: GradientIcon(
+                              isSelect ? like : disLike, 27.sp, gradient())),
+                    ),
+                  ),
+                ),
+              ),
+//conuter of like------------------------------------------
+              Padding(
+                padding: EdgeInsets.only(left: 20.r, right: 20.r),
+                child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: text(context, "$liksCounter", 15, white,
+                        fontWeight: FontWeight.bold)),
+              ),
             ],
           ),
         ));
   }
-
- 
 }
