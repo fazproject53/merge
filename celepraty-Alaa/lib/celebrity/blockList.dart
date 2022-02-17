@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class blockList extends StatefulWidget{
+  const blockList({Key? key}) : super(key: key);
+
   _blockListState createState() => _blockListState();
 }
 
