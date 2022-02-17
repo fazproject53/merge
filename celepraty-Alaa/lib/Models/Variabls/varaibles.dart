@@ -1,10 +1,9 @@
-
+import 'package:celepraty/Models/Methods/method.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //colors----------------------------------------------------------------
 const Color blue = Color(0xFF0AB3D0);
-const Color backgroundColor = Color(0xFFf0f0f0);
 const Color white = Color(0xFFFFFFFF);
 const Color pink = Color(0xFFE468CA);
 const Color pinkLigth = Color(0xFFFB6580);
@@ -21,24 +20,26 @@ var grey = Colors.grey[500];
 var deepgrey = Colors.grey[700];
 var amber=Colors.amber[700];
 var red=Colors.red[900];
+const Color deepwhite = Color(0xFFFAFAFA);
+const Color fillWhite = Color(0xFFFAFAFA);
+const Color transparent=Colors.transparent;
+Color textFieldBlack2 = Color(0xFF0B0B15);
+
 var green = Colors.green;
 
 var normalGrey = Colors.grey;
-const Color deepwhite = Color(0xFFFAFAFA);
-const Color transparent=Colors.transparent;
-const Color textFieldBlack2 = Color(0xFF0B0B15);
 
 //Icons name----------------------------------------------------------------
-IconData nameIcon = Icons.person;
-IconData passIcon = Icons.lock_outline;
-IconData emailIcon = Icons.email_outlined;
-IconData countryIcon = Icons.flag_rounded;
-IconData catogaryIcon = Icons.reduce_capacity_rounded;
-IconData price = Icons.attach_money;
-IconData money = Icons.credit_card;
-IconData support = Icons.headset_mic;
-IconData orders = Icons.campaign;
-IconData invoice = Icons.receipt;
+IconData nameIcon=Icons.person;
+IconData passIcon=Icons.lock_outline;
+IconData emailIcon=Icons.email_outlined;
+IconData countryIcon=Icons.flag_rounded;
+IconData catogaryIcon=Icons.reduce_capacity_rounded;
+IconData price =Icons.attach_money;
+IconData money =Icons.credit_card;
+IconData support =Icons.headset_mic;
+IconData orders =Icons.campaign;
+IconData invoice =Icons.receipt;
 IconData store =Icons.store;
 IconData copun = Icons.redeem;
 IconData scheduale = Icons.event_available;
@@ -53,6 +54,10 @@ IconData adArea = Icons.input;
 IconData arrow = Icons.arrow_back_ios;
 IconData attach = Icons.attach_file;
 IconData clander = Icons.calendar_today_rounded;
+IconData send = Icons.send;
+Icon back=Icon(Icons.arrow_back_ios_sharp,color: black,size:30.w);
+
+
 IconData addNew = Icons.add_circle_rounded;
 IconData typeOfDiscount = Icons.local_offer_outlined;
 IconData numberOfUsers = Icons.people_outlined;
@@ -66,10 +71,9 @@ IconData voiceIcon = Icons.keyboard_voice_sharp;
 IconData filter = Icons.filter_alt_rounded;
 IconData gift =Icons.card_giftcard_rounded;
 IconData like=Icons.favorite_outlined;
-Icon back=Icon(Icons.arrow_back_ios_sharp,color: black,size:30.w);
 IconData disLike = Icons.favorite_border;
 IconData playViduo = Icons.play_arrow_rounded;
-//controller name---------------------------------------------------------------
+//controller name----------------------------------------------------------------
 TextEditingController nameConttroller= TextEditingController();
 TextEditingController passConttroller=TextEditingController();
 TextEditingController emailConttroller=TextEditingController();
@@ -94,24 +98,24 @@ List<String>countryName=[ "السعودية","الامارات","البحرين"
 List<String>adsImage=[
  "assets/image/adv1.jpg" ,
  "assets/image/adv2.jpg" ,
-  "assets/image/adv3.jpg" ,
-  "assets/image/adv4.jpg" 
-  ];
+ "assets/image/adv3.jpg" ,
+ "assets/image/adv4.jpg"
+];
 
 List<String>giftImage=[
  "assets/image/gift1.jpg" ,
  "assets/image/gift2.jpg" ,
-  "assets/image/gift3.jpg" ,
-  "assets/image/gift5.jpg" 
-  ];
+ "assets/image/gift3.jpg" ,
+ "assets/image/gift5.jpg"
+];
 
-  List<String>giftType=[
+List<String>giftType=[
  "عيد ميلاد" ,
  "تخرج" ,
  "عيد الام" ,
- "زواج" 
-  ];
-  
+ "زواج"
+];
+
 //font textScaling
 double textScaling = 2.7;
 

@@ -1,5 +1,4 @@
 import 'package:celepraty/Models/Variabls/varaibles.dart';
-import 'package:celepraty/celebrity/DiscountCodes/discount_codes_main.dart';
 import 'package:celepraty/celebrity/Requests/ReguistMainPage.dart';
 import 'package:celepraty/celebrity/blockList.dart';
 import 'package:celepraty/celebrity/celebrityHomePage.dart';
@@ -13,7 +12,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:device_preview/device_preview.dart';
 
 import 'Account/logging.dart';
-import 'Users/Explowr/Explower.dart';
 
 void main() => runApp(
       DevicePreview(
@@ -35,13 +33,10 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: () => MaterialApp(
-
-          home:const Explower(),
-
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: "Cairo",
               colorScheme: ColorScheme.fromSwatch().copyWith(primary: pinkLigth),),
-          
+            home: celebrityHomePage()
             //----------------------------------
           ),
       ),

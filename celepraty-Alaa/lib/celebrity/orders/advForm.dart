@@ -21,7 +21,7 @@ class _advFormState extends State<advForm>{
   static DateTime current = DateTime.now();
   static bool checkit =false;
 
-  List<String> owner = ['فرد','مؤسسة',' شركة'];
+  List<String> owner = ['فرد','مؤسسة','شركة'];
   List attend=['يلزم الحضور','لا يلزم الحضور'];
   List type = ['متج','خدمة'];
   List period =['صباحا','مساء'];
@@ -73,7 +73,7 @@ class _advFormState extends State<advForm>{
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            padding(8,20, text(context, 'مالك الاعلان', 14, black, fontWeight: FontWeight.bold)),
+                            padding( 8,20, text(context, 'مالك الاعلان', 14, black, fontWeight: FontWeight.bold)),
                             buildCkechboxList(owner),
                           ],
                         ),
@@ -81,7 +81,7 @@ class _advFormState extends State<advForm>{
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            padding(8,20, text(context, 'صفة الاعلان', 14, black, fontWeight: FontWeight.bold)),
+                            padding( 8,20, text(context, 'صفة الاعلان', 14, black, fontWeight: FontWeight.bold)),
                             buildCkechboxList(attend),
                           ],
                         ),
@@ -132,6 +132,9 @@ class _advFormState extends State<advForm>{
                         const SizedBox(height: 30,),
                         padding(15, 15, gradientContainerNoborder(getSize(context).width,  buttoms(context, 'رفع الطلب', 15, white, (){})),),
                         const SizedBox(height: 30,),
+
+
+
 
                       ]),
                   ),),),
