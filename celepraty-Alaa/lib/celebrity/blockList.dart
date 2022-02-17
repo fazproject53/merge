@@ -14,7 +14,7 @@ class _blockListState extends State<blockList> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: drowAppBar('المحظورين'),
+        appBar: drowAppBar('المحظورين',context),
       body: Stack(children: [
 
         paddingg( 10,10,20,ListView.builder(

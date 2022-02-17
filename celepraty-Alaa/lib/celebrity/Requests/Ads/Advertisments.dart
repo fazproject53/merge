@@ -52,7 +52,7 @@ class _AdvertismentState extends State<Advertisment> {
                     ),
                     image: DecorationImage(
                         image: AssetImage(
-                          AdsImage[i],
+                          adsImage[i],
                         ),
                         fit: BoxFit.cover,
                         colorFilter:

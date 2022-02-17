@@ -58,13 +58,18 @@ IconData typeOfDiscount = Icons.local_offer_outlined;
 IconData numberOfUsers = Icons.people_outlined;
 IconData duration = Icons.timer_outlined;
 IconData discountDes = Icons.description_outlined;
-
 IconData removeDiscount = Icons.delete_rounded;
 IconData editDiscount = Icons.edit_rounded;
-
+IconData imageIcon = Icons.image;
+IconData vieduoIcon = Icons.videocam;
+IconData voiceIcon = Icons.keyboard_voice_sharp;
+IconData filter = Icons.filter_alt_rounded;
+IconData gift =Icons.card_giftcard_rounded;
+IconData like=Icons.favorite_outlined;
 Icon back=Icon(Icons.arrow_back_ios_sharp,color: black,size:30.w);
-
-//controller name----------------------------------------------------------------
+IconData disLike = Icons.favorite_border;
+IconData playViduo = Icons.play_arrow_rounded;
+//controller name---------------------------------------------------------------
 TextEditingController nameConttroller= TextEditingController();
 TextEditingController passConttroller=TextEditingController();
 TextEditingController emailConttroller=TextEditingController();
@@ -80,11 +85,13 @@ String avd2=staticPath+"avd2.jpg";
 String avd3=staticPath+"avd3.jpg";
 String avd4=staticPath+"avd4.jpg";
 String discount =staticPath+"coupon.png";
+String explorImage=staticPath+"user.png";
+String videoImage=staticPath+"featured.png";
 
 //lists-------------------------------------------------------------
 List<String>countryName=[ "السعودية","الامارات","البحرين","الكويت","المانيا", "ماليزيا","قطر", "الجزائر","لبنان","سنغافورة","تركيا","الصين","فرنسا","الهند","مصر","العراق""الاردن""امريكا""كوريا"];
 
-List<String>AdsImage=[
+List<String>adsImage=[
  "assets/image/adv1.jpg" ,
  "assets/image/adv2.jpg" ,
   "assets/image/adv3.jpg" ,

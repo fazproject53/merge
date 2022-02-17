@@ -92,6 +92,17 @@ Widget gradientContainer(double width, Widget child,{bool gradient = false,doubl
     ),
   );
 }
+
+//gradient color---------------------------------------------------------------------
+ LinearGradient gradient() {
+    return const LinearGradient(
+      begin: Alignment(0.7, 2.0),
+      end: Alignment(-0.69, -1.0),
+      colors: [Color(0xff0ab3d0), Color(0xffe468ca)],
+      stops: [0.0, 1.0],
+    );
+  }
+
 Widget gradientContainerNoborder(double width,Widget child, {double height = 40.0}) {
 
   return Container(
