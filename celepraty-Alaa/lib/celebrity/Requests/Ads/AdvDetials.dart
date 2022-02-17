@@ -118,7 +118,7 @@ class _AdvDetialsState extends State<AdvDetials> {
                     15,
                     white,
                     () {},
-                    evaluation: 1,
+                    evaluation: 0,
                   ),
                   height: 50,
                   
