@@ -2,6 +2,7 @@
 import 'package:celepraty/Models/Methods/method.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:celepraty/celebrity/blockList.dart';
+import 'package:celepraty/celebrity/chat/chatsList.dart';
 import 'package:celepraty/celebrity/setting/profileInformation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +16,7 @@ class _celebratyProfileState extends State<celebratyProfile>{
     ,'المحادثات','الدعم','تسجيل الخروج'];
   final List<IconData> icons = [nameIcon , invoice, money,price,orders,store,copun, scheduale,studio,pages,block,chat,support,logout];
   final List<Widget> page = [profileInformaion(),profileInformaion(), profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion(),profileInformaion()
-       , profileInformaion(),profileInformaion(),blockList(),profileInformaion(),profileInformaion(),profileInformaion()];
+       , profileInformaion(),profileInformaion(),blockList(),chatsList(),profileInformaion(),profileInformaion()];
 
 
 @override
@@ -77,10 +78,10 @@ class _celebratyProfileState extends State<celebratyProfile>{
                  Row(
                      mainAxisAlignment: MainAxisAlignment.center,
                      children:[
-                      padding(8, 8,  Container(width: 30, height:30,child: Image.asset('assets/image/facebook.png',)),),
-                      padding(8, 8,  Container(width: 30, height:30,child: Image.asset('assets/image/instagram.png',),),),
-                      padding(8, 8,  Container(width: 30, height:30,child:  Image.asset('assets/image/snapchat.png',),),),
-                      padding(8, 8, Container(width: 30, height:30,child:  Image.asset('assets/image/twitter.png',),),),
+                      padding(8, 8,  Container(width: 30, height:30,child: Image.asset('assets/image/icon- faceboock.png',)),),
+                      padding(8, 8,  Container(width: 30, height:30,child: Image.asset('assets/image/icon- insta.png',),),),
+                      padding(8, 8,  Container(width: 30, height:30,child:  Image.asset('assets/image/icon- snapchat.png',),),),
+                      padding(8, 8, Container(width: 30, height:30,child:  Image.asset('assets/image/icon- twitter.png',),),),
           ]),
 
             paddingg(8, 8, 12,Row(
@@ -90,6 +91,7 @@ class _celebratyProfileState extends State<celebratyProfile>{
                 text(context,'حقوق الطبع والنشر محفوظة', 14, black  ),
               ],
             ),),
+                  SizedBox(height: 20.h,)
 
                 ]),
           ),
