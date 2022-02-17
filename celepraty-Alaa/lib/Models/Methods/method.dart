@@ -18,11 +18,9 @@ Widget text(
   String key,
   double fontSize,
   Color color, {
-    //defalute
   family = "Cairo",
   align = TextAlign.right,
   double space = 0,
-
   FontWeight fontWeight = FontWeight.normal,
 }) {
   return Text(
@@ -36,9 +34,11 @@ Widget text(
       fontWeight: fontWeight,
       ),
   );
+
+
 }
 
-//===============================Container===============================
+//===============================Continer===============================
 Widget container(double height, double width, double marginL, double marginR,
     Color color, Widget child,
     {double blur = 0.0,
@@ -73,8 +73,8 @@ Widget container(double height, double width, double marginL, double marginR,
     child: child,
   );
 }
-//gradient container------------------------------------------------------------------
-Widget gradientContainer(double width, Widget child,{bool gradient = false,double height=45}) {
+//gradient contaner------------------------------------------------------------------
+Widget gradientContainer(double width, Widget child,{bool gradient =false,double height=45}) {
   return Container(
     width: width.w,
     height: height.h,
@@ -92,7 +92,8 @@ Widget gradientContainer(double width, Widget child,{bool gradient = false,doubl
     ),
   );
 }
-Widget gradientContainerNoborder(double width,Widget child, {double height = 40.0}) {
+
+Widget gradientContainerNoborder(double width,Widget child, {double height = 46.0}) {
 
   return Container(
     width: width.w,
@@ -107,7 +108,10 @@ Widget gradientContainerNoborder(double width,Widget child, {double height = 40.
         colors: [Color(0xff0ab3d0), Color(0xffe468ca)],
         stops: [0.0, 1.0],
       ),
+
     ),
+
+
   );
 }
 //==================== container with no shadow ===========================
@@ -126,7 +130,10 @@ Widget gradientContainerNoborder2(double width,double height,Widget child) {
         colors: [Color(0xff0ab3d0), Color(0xffe468ca)],
         stops: [0.0, 1.0],
       ),
+
     ),
+
+
   );
 }
 Widget gradientContainerWithHeight(double width, double height, Widget child) {
@@ -144,10 +151,13 @@ Widget gradientContainerWithHeight(double width, double height, Widget child) {
         stops: [0.0, 1.0],
 
       ),
+
     ),
+
+
   );
 }
-//solid: container------------------------------------------------------------------
+//solid: contaner------------------------------------------------------------------
 
 Widget solidContainer(double width, Color color, Widget child) {
   return Container(
@@ -220,7 +230,7 @@ goTopagepush(context, pageName) {
 }
 
 
-//get height and width===============================================================
+//get heghit and width===============================================================
 Size getSize(context) {
   return MediaQuery.of(context).size;
 }
@@ -256,7 +266,7 @@ Widget textField(
   );
 }
 
-//SingWith bottom------------------------------------------------------------------
+//SingWith bouttom------------------------------------------------------------------
 Widget singWthisButtom(
     context, String key, Color textColor, Color backColor, onPressed, image) {
   return TextButton(
@@ -278,8 +288,7 @@ Widget singWthisButtom(
     ),
   );
 }
-///------------------
-///FontWeight fontWeight = FontWeight.normal
+
 Widget textFieldNoIcon(
     context,
     String key,
@@ -287,7 +296,7 @@ Widget textFieldNoIcon(
     bool hintPass,
     TextEditingController mycontroller,
     myvali,
-    isOptional,
+    isOptional
     ) {
   return TextFormField(
     obscureText: hintPass,
@@ -299,12 +308,13 @@ Widget textFieldNoIcon(
         filled: true,
         helperText: isOptional? 'اختياري': null,
         helperStyle: TextStyle(color: pink, fontSize: fontSize.sp, fontFamily: 'Cairo'),
-        hintStyle: TextStyle(color: Colors.grey, fontSize: fontSize.sp, fontFamily: 'Cairo'),
+        hintStyle: TextStyle(color: black, fontSize: fontSize.sp, fontFamily: 'Cairo'),
         fillColor: textFieldBlack2.withOpacity(0.70),
         labelStyle: TextStyle(color: white, fontSize: fontSize.sp),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
         focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: pink,width: 1)),
-        hintText: key,
+        labelText: key,
+
         contentPadding: EdgeInsets.all(10.h)),
   );
 
@@ -320,7 +330,7 @@ Widget textFieldDesc(
     ) {
   var expand = false;
   return SizedBox(
-    height: 105.h,
+    height: 200.h,
     child: TextField(
       controller: mycontroller,
       keyboardType: TextInputType.multiline,
@@ -331,55 +341,19 @@ Widget textFieldDesc(
       decoration: InputDecoration(
           isDense: false,
           filled: true,
-          hintStyle: TextStyle(color: Colors.grey, fontSize: fontSize.sp, fontFamily: 'Cairo'),
+          hintStyle: TextStyle(color: black, fontSize: fontSize.sp, fontFamily: 'Cairo'),
           fillColor: textFieldBlack2.withOpacity(0.70),
-          labelStyle: TextStyle(color: Colors.grey, fontSize: fontSize.sp,), alignLabelWithHint: true,
+          labelStyle: TextStyle(color: white, fontSize: fontSize.sp,), alignLabelWithHint: true,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
           focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: pink,width: 1)),
-          hintText: key,
-
+          labelText: key,
           contentPadding: EdgeInsets.all(10.h)),
     ),
   );
+
 }
 
-///on change text filed
-Widget textFieldDescOnChange (
-    context,
-    String key,
-    double fontSize,
-    bool hintPass,
-    TextEditingController mycontroller,
-    myvali,
-    Function(String)? onChanged,
-    ) {
-  var expand = false;
-  return SizedBox(
-    height: 105.h,
-    child: TextField(
-      controller: mycontroller,
-      keyboardType: TextInputType.multiline,
-      maxLines: null,
-      onChanged: onChanged,
-      minLines: 10,
-      textAlignVertical: TextAlignVertical.top,
-      style: TextStyle(color: white, fontSize: fontSize.sp, fontFamily: 'Cairo'),
-      decoration: InputDecoration(
-          isDense: false,
-          filled: true,
-          hintStyle: TextStyle(color: Colors.grey, fontSize: fontSize.sp, fontFamily: 'Cairo'),
-          fillColor: textFieldBlack2.withOpacity(0.70),
-          labelStyle: TextStyle(color: Colors.grey, fontSize: fontSize.sp,), alignLabelWithHint: true,
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
-          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: pink,width: 1)),
-          hintText: key,
-
-          contentPadding: EdgeInsets.all(10.h)),
-    ),
-  );
-}
-
-//============================ text field curved from one side ==================================
+//============================ text feild curved from one side ==================================
 
 Widget textFieldNoIcon2(
     context,
@@ -494,30 +468,29 @@ Future  pickImage(imagee) async {
     if(image == null) return;
     final temp = File(image.path);
     imagee = temp;
-    }on PlatformException catch (e){ print('could not pick image $e');}
+    }on PlatformException catch (e){print('could not pick image $e');}
 }
-//-----------------------------
 Widget buildCkechboxList(list){
   List<Widget> w = [];
   Widget cb;
-  for(var i = 0 ; i< list.length; i++){
+  for(var i =0 ; i< list.length; i++){
     cb= Expanded(
       child:
       Padding(
         padding: const EdgeInsets.all(2.0),
         child: Row(
           children: [
-            Checkbox(value: false , onChanged: (value){}),
+            Checkbox(value: false, onChanged: (value){}),
             Text(list[i])
           ],
         ),
       ),
     );
     w.add(cb);}
+
   return Row(mainAxisAlignment: MainAxisAlignment.start,
       children: w);
 }
-//-----------------------
 
 divider({double thickness= 2, double indent=15,double endIndent=15,}){
   return Align(
@@ -534,9 +507,9 @@ divider({double thickness= 2, double indent=15,double endIndent=15,}){
 }
 //Drow app bar----------------------------------------------------
 
- drowAppBar(String title, BuildContext context){
+ drowAppBar(String titel){
   return AppBar(
-    title: Text(title,style:TextStyle(
+    title: Text(titel,style:TextStyle(
       fontSize:22.sp, 
       fontFamily: 'Cairo',
       color: black
@@ -544,17 +517,9 @@ divider({double thickness= 2, double indent=15,double endIndent=15,}){
     
     ),
     centerTitle: true,
-    leading: IconButton(
-      padding: EdgeInsets.only(right: 20.w),
-      icon: const Icon(Icons.arrow_back_ios),
-      color: Colors.black,
-      onPressed: () {
-        Navigator.pop(context);
-      },
-    ),
+    leading: back,
     backgroundColor: deepwhite,
     elevation: 0,
     
   );
 }
-
