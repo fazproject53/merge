@@ -27,7 +27,7 @@ class _RequestMainPageState extends State<RequestMainPage> {
     return Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          appBar: drowAppBar(requestBar),
+          appBar: drowAppBar(requestBar, context),
           body:
               Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             SizedBox(

@@ -21,7 +21,7 @@ class _advAreaState extends State<advArea>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: drowAppBar('مساحة اعلانية'),
+        appBar: drowAppBar('مساحة اعلانية', context),
         body: Directionality(
         textDirection: TextDirection.rtl,
         child: SingleChildScrollView(
