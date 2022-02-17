@@ -7,6 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Singup.dart';
 
 class Logging extends StatefulWidget {
+  const Logging({Key? key}) : super(key: key);
+
  
 
   @override
