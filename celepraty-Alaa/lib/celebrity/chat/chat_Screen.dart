@@ -13,21 +13,29 @@ class chatScreen extends StatefulWidget{
 
 class _chatScreenState extends State<chatScreen> {
 
+  List<Widget>? listwidget;
+
   @override
   Widget build(BuildContext context) {
+    listwidget= [  container('بخير الحمد لله'), container('مرحبا'), containerUser('ليجسي كيف حالك ؟'), containerUser('مرحبا'),];
+
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: drawAppBar( Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [ text(context, 'مروان بابلو', 15, white),SizedBox(width: 10.w,),   CircleAvatar( backgroundColor: white,//backgroundImage: Image.asset('assets/image/featured.png').image,
-          )],) , context),
+          )],) , context, color: purple),
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-            Container(
+            Expanded(
+              child: ListView(
+                reverse: true,
+                children: listwidget!,
+              ),
               ),
 
             Container(
@@ -60,6 +68,40 @@ class _chatScreenState extends State<chatScreen> {
           ],),
         ),
       ),
+    );
+  }
+
+  Widget container(text){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          height: 45.h,
+          margin: EdgeInsets.only(top: 10, bottom: 10, left: 3, right: 5),
+          decoration: BoxDecoration(color: purple, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), topLeft: Radius.circular(10))),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(text, style: TextStyle(color: white),),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget containerUser(text){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Container(
+          height: 45.h,
+          margin: EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 2),
+          decoration: BoxDecoration(color: grey, borderRadius: BorderRadius.only(bottomRight: Radius.circular(10), topRight: Radius.circular(10))),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(text, style: TextStyle(color: white),),
+          ),
+        ),
+      ],
     );
   }
 }
