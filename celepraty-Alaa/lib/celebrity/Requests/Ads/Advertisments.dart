@@ -123,8 +123,11 @@ class _AdvertismentState extends State<Advertisment> {
 ),
      Expanded(flex: 1, child:text(context, "مساء", 12, pink,fontWeight:FontWeight.bold)
    )],
-     )),   ],
-   ))
+     )),  
+      ],
+   )
+   )
+
          
          
          
