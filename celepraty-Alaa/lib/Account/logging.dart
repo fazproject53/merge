@@ -1,3 +1,4 @@
+import 'package:celepraty/MainScreen/main_screen.dart';
 import 'package:celepraty/Models/Methods/method.dart';
 import 'package:celepraty/Models/Variabls/varaibles.dart';
 import 'package:celepraty/celebrity/setting/celebratyProfile.dart';
@@ -75,7 +76,7 @@ class _LoggingState extends State<Logging> {
                           347,
                           buttoms(context, 'تسجيل الدخول', 13, white, () {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (_) => celebratyProfile()));
+                                MaterialPageRoute(builder: (_) => MainScreen()));
                           })),
                       SizedBox(
                         height: 34.h,
@@ -117,7 +118,7 @@ class _LoggingState extends State<Logging> {
       children: [
         Row(
           children: [
-            InkWell(child: Icon(Icons.check_circle_rounded, color: isChckid?pink:ligthtBlack, size: 25.sp),onTap:(){
+            InkWell(child: Icon(Icons.check_circle_rounded, color: isChckid?pink:ligthtBlack, size: 20.sp),onTap:(){
              
               setState(() {
                  isChckid=!isChckid;
@@ -126,13 +127,13 @@ class _LoggingState extends State<Logging> {
             SizedBox(
               width: 4.w,
             ),
-            text(context, 'تزكرني', 13.sp, textBlack),
+            text(context, 'تزكرني', 9.sp, textBlack),
           ],
         ),
         // SizedBox(
         //   width: 180.w,
         // ),
-        text(context, 'هل نسيت كلمة المرور؟', 12.sp, purple),
+        text(context, 'هل نسيت كلمة المرور؟', 9.sp, purple),
       ],
     );
   }

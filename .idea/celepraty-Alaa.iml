@@ -18,6 +18,12 @@
       <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/shared_preferences_ios/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/shared_preferences_ios/build" />
       <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/shared_preferences_ios/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/fluttertoast/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/fluttertoast/build" />
+      <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/fluttertoast/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/fluttertoast/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/fluttertoast/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/celepraty-Alaa/ios/.symlinks/plugins/fluttertoast/example/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

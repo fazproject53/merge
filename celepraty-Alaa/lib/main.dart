@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         builder: () => MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: "Cairo",
-              colorScheme: ColorScheme.fromSwatch().copyWith(primary: pinkLigth),),
+              colorScheme: ColorScheme.fromSwatch().copyWith(primary: purple),),
             home: MyHomePage()
             //----------------------------------
           ),

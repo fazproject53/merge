@@ -34,7 +34,6 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      bottom: false,
       child: Column(
         children: [
           SizedBox(
@@ -58,13 +57,13 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                           "انشاء كود جديد",
                           15,
                           white,
-                              () {
+                          () {
                             //Go to create a new discount code screen
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (_) =>
-                                    const CreateNewDiscountCode()));
+                                        const CreateNewDiscountCode()));
                           },
                           evaluation: 0,
                         ),
@@ -76,28 +75,30 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                     ),
                   ],
                 ),
-                Expanded(
+                Positioned(
                   child: Padding(
                     padding: EdgeInsets.only(top: 40.h, right: 20.w),
                     child: text(context, "الاكواد الحالية", 25, ligthtBlack),
                   ),
                 ),
                 //Expanded ListView
-                Padding(
-                  padding: EdgeInsets.only(top: 100.h),
-                  child: Expanded(
+                Positioned(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 100.h),
                       child: ListView.builder(
                         itemCount: codeList.length,
                         itemBuilder: (context, index) {
                           return Card(
                             child: ExpansionTile(
-                              title: text(context, codeList[index].code, 16, black),
-                              subtitle: text(context, codeList[index].status, 16,
-                                  green),
+                              title: text(
+                                  context, codeList[index].code, 16, black),
+                              subtitle: text(
+                                  context, codeList[index].status, 16, green),
                               ///Inside each list
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(top: 10.h, right: 15.w),
+                                  margin:
+                                      EdgeInsets.only(top: 10.h, right: 15.w),
                                   height: 180.h,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -128,6 +129,7 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                                           ),
                                         ],
                                       ),
+
                                       ///Number of users
                                       Row(
                                         children: [
@@ -153,6 +155,7 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                                               black),
                                         ],
                                       ),
+
                                       ///Discount go to
                                       Row(
                                         children: [
@@ -179,6 +182,7 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                                           ),
                                         ],
                                       ),
+
                                       ///Duration
                                       Row(
                                         children: [
@@ -205,6 +209,7 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                                           ),
                                         ],
                                       ),
+
                                       ///Description
                                       Row(
                                         children: [
@@ -236,14 +241,17 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                                       Container(
                                         margin: EdgeInsets.only(left: 20.w),
                                         child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
                                           children: [
                                             IconButton(
-                                              padding: EdgeInsets.only(right: 20.w),
+                                              padding:
+                                                  EdgeInsets.only(right: 20.w),
                                               icon: Icon(editDiscount),
                                               color: black.withOpacity(0.8),
                                               onPressed: () {
                                                 ///go to create new discount to edit the code
+                                                print('edit');
                                               },
                                             ),
                                             IconButton(
@@ -252,6 +260,7 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                                               onPressed: () {
                                                 ///delete the discount code
                                                 ///Alert dialog to conform
+                                                print('delete');
                                               },
                                             )
                                           ],
@@ -264,8 +273,10 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
                             ),
                           );
                         },
-                      )),
-                )
+                      ),
+
+                  ),
+                ),
               ],
             ),
           ),
@@ -274,4 +285,3 @@ class _HomeBodyDiscountState extends State<HomeBodyDiscount> {
     );
   }
 }
-

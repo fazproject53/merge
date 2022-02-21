@@ -79,6 +79,13 @@
             </list>
           </value>
         </entry>
+        <entry key="curved_navigation_bar">
+          <value>
+            <list>
+              <option value="$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/curved_navigation_bar-1.0.3/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="device_frame">
           <value>
             <list>
@@ -177,10 +184,24 @@
             </list>
           </value>
         </entry>
+        <entry key="fluttertoast">
+          <value>
+            <list>
+              <option value="$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.8/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="freezed_annotation">
           <value>
             <list>
               <option value="$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/freezed_annotation-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="get">
+          <value>
+            <list>
+              <option value="$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.1/lib" />
             </list>
           </value>
         </entry>
@@ -520,6 +541,7 @@
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/cross_file-0.3.2/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4/lib" />
+      <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/curved_navigation_bar-1.0.3/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/device_frame-1.0.0/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/device_preview-1.0.0/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/dots_indicator-2.0.0/lib" />
@@ -530,7 +552,9 @@
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.5/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.1.1/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-1.0.3/lib" />
+      <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.8/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/freezed_annotation-1.1.0/lib" />
+      <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.1/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/lib" />
       <root url="file://$USER_HOME$/Documents/dev/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.4+6/lib" />

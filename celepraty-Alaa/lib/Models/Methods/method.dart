@@ -277,9 +277,9 @@ Widget singWthisButtom(
         width: 30.w,
       ),
       SizedBox(
-        width: 16.92.w,
+        width: 3.w,
       ),
-      text(context, key, 11.sp, textColor)
+      text(context, key, 9.sp, textColor)
     ]),
     style: ButtonStyle(
       backgroundColor: MaterialStateProperty.all(backColor),
